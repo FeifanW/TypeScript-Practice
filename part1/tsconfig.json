@@ -1,0 +1,34 @@
+{
+//  include指定那些文件需要被编译
+//  **表示任意目录
+//  *表示任意文件
+//  exclude表示不包含那些文件
+//  exclude表示不需要被编译的文件
+//  extends继承
+//  files指定要编译的文件列表
+//  compilerOptions编译器选项
+//  target指定es编译的版本
+//  module指定模块化的规范
+//  lib指定项目里面用到那些库，一般不需要改
+//  outDir用来指定编译后文件所在的目录
+//  outFile 所有的全局作用域中的代码会合并到同一个文件中
+//  allowJs 是否对js进行编译
+//  checkJs 是否检查js代码符合语法规范
+//  removeComments 是否移除注释
+//  noEmit 不生产编译后的文件
+//  noEmitOnError 当有错误时不生成编译后的文件
+//  alwaysStrict  用来设置编译后的文件是否可以使用严格模式
+//  noImplicitAny 不允许隐式的any类型
+//  noImplicitThis 不允许不明确类型的this
+//  strict 所有严格检查的总开关
+// strictNullChecks 严格检查空值
+
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
