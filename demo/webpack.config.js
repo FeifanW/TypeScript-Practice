@@ -4,6 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 // webpack中所有的配置信息都应该写在module.exports中
 module.exports = {
+    mode:"development",
     // 指定入口文件
     entry:"./src/index.ts",
     // 指定打包文件所在目录
@@ -55,7 +56,7 @@ module.exports = {
                     'ts-loader'
                 ],
                 // 要排除的文件
-                exclude:/node-modules/,
+                exclude:/node-modules/
             },
             // 设置less文件的处理
             {
@@ -65,14 +66,14 @@ module.exports = {
                     "css-loader",
                     // 引入postcss
                     {
-                        loader: "postcss-loader",
+                        loader:"postcss-loader",
                         options:{
                             postcssOptions:{
-                                plugins:[
+                                plugins: [
                                     [
                                         "postcss-preset-env",
                                         {
-                                            browsers:'last 2 versions'
+                                            browsers:"last 2 versions"
                                         }
                                     ]
                                 ]
@@ -86,7 +87,9 @@ module.exports = {
     },
     // 配置webpack插件
     plugins:[
-        new HTMLWebpackPlugin(),
+        new HTMLWebpackPlugin({
+            template:"./src/index.html"
+        }),
         new CleanWebpackPlugin(),
     ],
     // 用来设置模块
