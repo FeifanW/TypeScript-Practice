@@ -14,7 +14,8 @@ module.exports = {
         // 打包后文件的文件
         filename:"bundle.js",
         environment:{
-            arrowFunction: false
+            arrowFunction: false,
+            const:false
         }
     },
     // 指定webpack打包时要使用的模块
