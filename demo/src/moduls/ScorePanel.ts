@@ -31,9 +31,9 @@ class ScorePanel{
     }
 }
 
-const scorePanel = new ScorePanel(100,2)
-for(let i=0;i<229;i++){
-    scorePanel.addScore()
-}
+// const scorePanel = new ScorePanel(100,2)
+// for(let i=0;i<229;i++){
+//     scorePanel.addScore()
+// }
 
 export default ScorePanel;
